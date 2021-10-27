@@ -1,0 +1,53 @@
+.header-head {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.header-intro {
+    text-align: start;
+    padding: 20vh 0vh;
+    margin-left: 12.5vw;
+}
+
+.header-intro h1 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-left: .5vw;
+}
+
+.header-intro h2 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 6vw;
+    color: transparent;
+    text-shadow: none;
+    -webkit-text-stroke: 1px #000;
+    width: 79vw;
+}
+
+.head-span {
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.75s;
+}
+
+.header-intro h2 span:hover{
+    color: black;
+}
+
+@media (max-width:768px) {
+    
+    .header-intro h2 {
+        display: block;
+        font-size: 15vw;
+        width: 30vw;
+    }
+
+}

@@ -1,0 +1,19 @@
+.project {
+    height: 200vh;
+    padding-top: 10vh;
+    scroll-snap-align: start;
+}
+
+.project div {
+    height: 500px;
+    width: 400px;
+    overflow: hidden;
+    margin-top: 20vh;
+    position: relative;
+}
+
+.project div img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
