@@ -8,6 +8,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  cursor: none;
 }
 
 html {
@@ -305,7 +306,7 @@ header {
 .active {
   bottom: 0;
   opacity: 1;
-  transition: ease-in-out 0.75s;
+  transition: opacity ease-in-out 0.75s;
 }
 
 .header-intro h2 span:hover {
@@ -386,12 +387,6 @@ footer h6 a::before {
 .footer1 {
   display: flex;
   flex-direction: column;
-}
-
-.footer2 {
-  align-self: flex-end;
-  padding: 1rem 0rem;
-  font-size: 0.9rem;
 }
 
 .about {

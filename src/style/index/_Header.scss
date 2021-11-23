@@ -35,7 +35,7 @@
 .active {
     bottom: 0;
     opacity: 1;
-    transition: ease-in-out 0.75s;
+    transition: opacity ease-in-out 0.75s;
 }
 
 .header-intro h2 span:hover{
