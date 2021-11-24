@@ -16,6 +16,12 @@ html {
     scroll-behavior: smooth;
 }
 
+main {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
 .element {
     position: relative;
     display: inline-block;
