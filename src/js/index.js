@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import GSAP from 'gsap'
-//
+
 import Animations from './Animations'
 import SmoothScroll from './SmoothScroll'
 
