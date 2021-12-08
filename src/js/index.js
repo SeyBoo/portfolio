@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import GSAP from 'gsap'
-
+//
 import Animations from './Animations'
 import SmoothScroll from './SmoothScroll'
 
@@ -36,7 +36,6 @@ class ScrollStage {
     }
 
     this.settings = {
-      // vertex
       uFrequency: {
         start: 0,
         end: 4
@@ -53,12 +52,11 @@ class ScrollStage {
         start: 0,
         end: 1.1
       },
-      // fragment
-      uDeepPurple: {  // max 1
+      uDeepPurple: {  
         start: 1,
         end: 0
       },
-      uOpacity: {  // max 1
+      uOpacity: {  
         start: .1,
         end: .66
       }
@@ -109,9 +107,6 @@ class ScrollStage {
     this.update()
   }
 
-  /**
-   * STAGE
-   */
   addCanvas() {
     this.canvas.classList.add('webgl')
     document.body.appendChild(this.canvas)
@@ -122,9 +117,6 @@ class ScrollStage {
     this.scene.add(this.camera)
   }
 
-  /**
-   * OBJECT
-   */
   addMesh() {
     this.geometry = new THREE.IcosahedronGeometry(1, 64)
     
@@ -149,9 +141,6 @@ class ScrollStage {
     this.scene.add(this.mesh)
   }
 
-  /**
-   * SCROLL BASED ANIMATIONS
-   */
   updateScrollAnimations() {
     this.scroll.running = false
     this.scroll.normalized = (this.scroll.hard / this.scroll.limit).toFixed(1)
@@ -176,14 +165,9 @@ class ScrollStage {
     }
   }
 
-  /**
-   * EVENTS
-   */
   addEventListeners() {
     window.addEventListener('load', this.onLoad.bind(this))
-    
-    // window.addEventListener('mousemove', this.onMouseMove.bind(this))  // enable for soundcheck (→ console)
-    
+       
     window.addEventListener('scroll', this.onScroll.bind(this))
 
     window.addEventListener('resize', this.onResize.bind(this))
@@ -196,8 +180,6 @@ class ScrollStage {
   }
 
   onMouseMove(event) {
-    // play with it!
-    // enable / disable / change x, y, multiplier …
 
     this.mouse.x = (event.clientX / this.viewport.width).toFixed(2) * 4
     this.mouse.y = (event.clientY / this.viewport.height).toFixed(2) * 2
@@ -206,8 +188,6 @@ class ScrollStage {
     GSAP.to(this.mesh.material.uniforms.uAmplitude, { value: this.mouse.x })
     GSAP.to(this.mesh.material.uniforms.uDensity, { value: this.mouse.y })
     GSAP.to(this.mesh.material.uniforms.uStrength, { value: this.mouse.y })
-    // GSAP.to(this.mesh.material.uniforms.uDeepPurple, { value: this.mouse.x })
-    // GSAP.to(this.mesh.material.uniforms.uOpacity, { value: this.mouse.y })
 
     console.info(`X: ${this.mouse.x}  |  Y: ${this.mouse.y}`)
   }
@@ -241,9 +221,6 @@ class ScrollStage {
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5))  
   }
 
-  /**
-   * LOOP
-   */
   update() {
     const elapsedTime = this.clock.getElapsedTime()
     this.mesh.rotation.y = elapsedTime * .05
@@ -255,14 +232,9 @@ class ScrollStage {
     window.requestAnimationFrame(this.update)
   }
 
-  /**
-   * RENDER
-   */
   render() {
     this.renderer.render(this.scene, this.camera)
   }  
 }
 
 new ScrollStage()
-
-console.log('%c Made by ꜰᴀʙᴏᴏʟᴇᴀ → https://twitter.com/faboolea', 'background: black; color: white; padding: 1ch 2ch; border-radius: 2rem;')
