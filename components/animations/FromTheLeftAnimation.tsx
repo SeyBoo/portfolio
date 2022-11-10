@@ -6,6 +6,7 @@ const FromTheLeftAnimation: FunctionComponent<PropsWithChildren> = ({
 }) => {
   return (
     <motion.div
+      className="w-full"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}

@@ -4,7 +4,7 @@ import Intro from "../components/Intro";
 
 export default function Home() {
   return (
-    <div className="bg-[#131415] text-white min-h-screen">
+    <div className="bg-[#131415] text-white min-h-screen overflow-hidden">
       <Intro />
       <div className="max-w-[1600px] m-auto">
         <main>
