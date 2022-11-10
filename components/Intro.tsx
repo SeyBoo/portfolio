@@ -2,24 +2,20 @@ import { FunctionComponent } from "react";
 import Image from "next/image";
 import Avatar from "../public/assets/avatar.jpg";
 import { motion } from 'framer-motion';
+import ZoomInAnimation from "./animations/ZoomInAnimation";
 
 const Intro: FunctionComponent = () => {
   return (
     <header className="bg-black py-[10%] md:py-0">
       <div className="flex flex-col md:flex-row md:h-screen md:justify-center items-center max-w-[90%] m-auto gap-6">
-        <motion.div 
-          className="max-w-[95%]"     
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            type:"spring",
-            bounce: .3,
-            duration: 1.5,
-            delay: .25,
-          }}
-      >
-          <Image src={Avatar} alt="avatar" className="rounded-full" width={325}/>
-        </motion.div>
+        <ZoomInAnimation className="max-w-[95%]">
+          <Image
+            src={Avatar}
+            alt="avatar"
+            className="rounded-full"
+            width={325}
+          />
+        </ZoomInAnimation>
         <div className="flex flex-col gap-6">
           <motion.h1 
             className="text-4xl md:text-6xl font-bold"
