@@ -48,7 +48,7 @@ const Intro: FunctionComponent = () => {
               href="mailto:antoinechevalier.work@protonmail.com"
               className="bg-white text-black text-md py-3 px-4 rounded-full font-bold"
             >
-              Chat with me
+              Chat with me →
             </a>
           </FromTheTopAnimation>
         </div>
