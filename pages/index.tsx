@@ -42,7 +42,7 @@ export default function Home() {
               className="w-[90%] max-w-[800px] m-auto p-6 md:p-12 rounded-lg flex flex-col gap-4"
               style={{
                 background:
-                  "linear-gradient(108deg, rgba(152,96,221,1) 0%, rgba(210,141,169,1) 72%);",
+                  "linear-gradient(108deg, rgba(152,96,221,1) 0%, rgba(210,141,169,1) 72%)",
               }}
             >
               <h4 className="text-3xl font-semibold">Let&apos;s chat!</h4>
