@@ -2,6 +2,7 @@ import AboutMe from "../components/About";
 import InformationBlock from "../components/InformationBlock";
 import Footer from "../components/Footer";
 import Intro from "../components/Intro";
+import FromTheLeftAnimation from "../components/animations/FromTheLeftAnimation";
 
 export default function Home() {
   return (
@@ -39,24 +40,30 @@ export default function Home() {
               reverse
             />
             <div
-              className="w-[90%] max-w-[800px] m-auto p-6 md:p-12 rounded-lg flex flex-col gap-4"
+              className="w-[90%] max-w-[800px] m-auto p-6 md:p-12 rounded-lg flex flex-col gap-4 overflow-hidden"
               style={{
                 background:
                   "linear-gradient(108deg, rgba(152,96,221,1) 0%, rgba(210,141,169,1) 72%)",
               }}
             >
-              <h4 className="text-3xl font-semibold">Let&apos;s chat!</h4>
-              <p className="font-light">
-                I&apos;d love to talk to you! Send me an email !
-              </p>
-              <div className="mt-2">
-                <a
-                  href="mailto:antoinechevalier.work@protonmail.com"
-                  className="bg-[#131415] text-[#8A24FF] text-md py-3 px-4 rounded-full font-bold"
-                >
-                  Chat with me →
-                </a>
-              </div>
+              <FromTheLeftAnimation>
+                <h4 className="text-3xl font-semibold">Let&apos;s chat!</h4>
+              </FromTheLeftAnimation>
+              <FromTheLeftAnimation>
+                <p className="font-light">
+                  I&apos;d love to talk to you! Send me an email !
+                </p>
+              </FromTheLeftAnimation>
+              <FromTheLeftAnimation>
+                <div className="mt-2">
+                  <a
+                    href="mailto:antoinechevalier.work@protonmail.com"
+                    className="bg-[#131415] text-[#8A24FF] text-md py-3 px-4 rounded-full font-bold"
+                  >
+                    Chat with me →
+                  </a>
+                </div>
+              </FromTheLeftAnimation>
             </div>
           </div>
         </main>
