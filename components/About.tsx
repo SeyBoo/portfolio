@@ -9,7 +9,7 @@ import FromTheTopAnimation from "./animations/FromTheTopAnimation";
 interface AboutImageProps {
   image: StaticImageData;
   text: string;
-  height: number;
+  height: string;
 }
 const AboutImageBlock: FunctionComponent<AboutImageProps> = ({
   image,
@@ -22,7 +22,7 @@ const AboutImageBlock: FunctionComponent<AboutImageProps> = ({
       <Image
         alt="pink-bg"
         src={image}
-        className={`rounded-lg md:w-96 w-[95%] m-auto h-20 md:h-[${height}px]`}
+        className={`rounded-lg md:w-96 w-[95%] m-auto h-20 ` + height}
       />
       <p className="text-2xl md:text-3xl absolute top-[50%] left-[50%] transform translate-y-[-50%] translate-x-[-50%]">
         {text}
@@ -107,7 +107,7 @@ const AboutMe: FunctionComponent = () => {
             </AboutTextContainer>
           </FromTheLeftAnimation>
           <FromTheRightAnimation>
-            <AboutImageBlock image={PinkBg} text="🇫🇷🏡📚" height={500} />
+            <AboutImageBlock image={PinkBg} text="🇫🇷🏡📚" height="md:h-[500px]" />
           </FromTheRightAnimation>
         </AboutBlock>
         <AboutBlock reverse>
@@ -123,7 +123,7 @@ const AboutMe: FunctionComponent = () => {
             </AboutTextContainer>
           </FromTheRightAnimation>
           <FromTheLeftAnimation>
-            <AboutImageBlock image={BlackBg} text="🧠👨‍💻" height={450} />
+            <AboutImageBlock image={BlackBg} text="🧠👨‍💻" height="md:h-[450px]" />
           </FromTheLeftAnimation>
         </AboutBlock>
         <AboutBlock>
@@ -140,7 +140,7 @@ const AboutMe: FunctionComponent = () => {
             </AboutTextContainer>
           </FromTheLeftAnimation>
           <FromTheRightAnimation>
-            <AboutImageBlock image={PinkBg} text="🧗🏊‍♂️" height={350}/>
+            <AboutImageBlock image={PinkBg} text="🧗🏊‍♂️" height="md:h-[350px]" />
           </FromTheRightAnimation>
         </AboutBlock>
       </div>
