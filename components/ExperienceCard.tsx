@@ -1,8 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { FunctionComponent, SVGProps } from "react";
+import { FunctionComponent } from "react";
 import ZoomInAnimation from "./animations/ZoomInAnimation";
-import { motion } from "framer-motion";
 import HoverMoveAnimation from "./animations/HoverMoveAnimation";
 
 export interface ExperienceCardProps {
