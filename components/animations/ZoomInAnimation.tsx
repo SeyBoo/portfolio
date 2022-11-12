@@ -9,14 +9,19 @@ const ZoomInAnimation: FunctionComponent<
 > = ({ children, className }) => {
   return (
     <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
       className={className}
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
       transition={{
         type: "spring",
         bounce: 0.4,
         duration: 1.5,
         delay: 0.25,
+      }}
+      variants={{
+        visible: { scale: 1, opacity: 1 },
+        hidden: { scale: 0.5, opacity: 0 },
       }}
     >
       {children}
