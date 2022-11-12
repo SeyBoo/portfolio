@@ -7,9 +7,16 @@ import ExperienceSection from "../components/ExperienceSection";
 import LayersIcon from "../public/assets/layers.png";
 import WorldIcon from "../public/assets/world.png";
 import ExploreIcon from "../public/assets/explore.png";
+import Head from "next/head";
 
 export default function Home() {
   return (
+    <>
+    <Head>
+      <title>Antoine Chevalier - Portfolio</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta name="description" content="Fullstack Web developper, Freelance Chevalier Antoine portfolio" />
+    </Head>
     <div className="bg-[#131415] text-white min-h-screen overflow-hidden">
       <Intro />
       <div className="max-w-[1600px] m-auto">
@@ -103,5 +110,6 @@ export default function Home() {
         <Footer />
       </div>
     </div>
+    </>
   );
 }
