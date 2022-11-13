@@ -15,7 +15,7 @@ export default function Home() {
     <Head>
       <title>Antoine Chevalier - Portfolio</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <meta name="description" content="Fullstack Web developper, Freelance Chevalier Antoine portfolio" />
+      <meta name="description" content="Fullstack web Developper living in Nice, freelancer, startup builder." />
     </Head>
     <div className="bg-[#131415] text-white min-h-screen overflow-hidden">
       <Intro />
