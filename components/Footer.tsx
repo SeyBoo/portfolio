@@ -1,5 +1,6 @@
-import Link from "next/link";
-import { FunctionComponent } from "react";
+import React from 'react';
+import Link from 'next/link';
+import { FunctionComponent } from 'react';
 
 const Footer: FunctionComponent = () => {
   return (

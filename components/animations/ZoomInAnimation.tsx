@@ -1,5 +1,5 @@
-import { FunctionComponent, PropsWithChildren } from "react";
-import { motion } from "framer-motion";
+import React, { FunctionComponent, PropsWithChildren } from 'react';
+import { motion } from 'framer-motion';
 
 interface ZoomInAnimationProps {
   className?: string;
@@ -14,7 +14,7 @@ const ZoomInAnimation: FunctionComponent<
       viewport={{ once: true }}
       className={className}
       transition={{
-        type: "spring",
+        type: 'spring',
         bounce: 0.4,
         duration: 1.5,
         delay: 0.25,

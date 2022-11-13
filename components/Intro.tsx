@@ -1,8 +1,8 @@
-import { FunctionComponent } from "react";
-import Image from "next/image";
-import Avatar from "../public/assets/avatar.jpg";
-import FromTheTopAnimation from "./animations/FromTheTopAnimation";
-import ZoomInAnimation from "./animations/ZoomInAnimation";
+import React, { FunctionComponent } from 'react';
+import Image from 'next/image';
+import Avatar from '../public/assets/avatar.jpg';
+import FromTheTopAnimation from './animations/FromTheTopAnimation';
+import ZoomInAnimation from './animations/ZoomInAnimation';
 
 const Intro: FunctionComponent = () => {
   return (
@@ -24,17 +24,17 @@ const Intro: FunctionComponent = () => {
           </FromTheTopAnimation>
           <FromTheTopAnimation delay={0.5}>
             <h2 className="text-xl md:text-2xl max-w-[30rem]">
-              a{" "}
+              a{' '}
               <strong
                 className="text-transparent bg-clip-text"
                 style={{
                   backgroundImage:
-                    "linear-gradient(135deg, #CB5EEE 0%, #4BE1EC 100%)",
+                    'linear-gradient(135deg, #CB5EEE 0%, #4BE1EC 100%)',
                 }}
               >
-                {" "}
+                {' '}
                 Fullstack Developper & AI enthusiast
-              </strong>{" "}
+              </strong>{' '}
               based in France, currently Freelancing and building project.
             </h2>
           </FromTheTopAnimation>

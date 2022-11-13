@@ -1,5 +1,5 @@
-import { FunctionComponent, PropsWithChildren } from "react";
-import { motion } from "framer-motion";
+import React, { FunctionComponent, PropsWithChildren } from 'react';
+import { motion } from 'framer-motion';
 
 const FromTheRightAnimation: FunctionComponent<PropsWithChildren> = ({
   children,
@@ -11,7 +11,7 @@ const FromTheRightAnimation: FunctionComponent<PropsWithChildren> = ({
       whileInView="visible"
       viewport={{ once: true }}
       transition={{
-        type: "spring",
+        type: 'spring',
         duration: 1.5,
         delay: 0.25,
       }}

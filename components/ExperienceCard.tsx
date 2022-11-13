@@ -1,8 +1,8 @@
-import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
-import { FunctionComponent } from "react";
-import ZoomInAnimation from "./animations/ZoomInAnimation";
-import HoverMoveAnimation from "./animations/HoverMoveAnimation";
+import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
+import React, { FunctionComponent } from 'react';
+import ZoomInAnimation from './animations/ZoomInAnimation';
+import HoverMoveAnimation from './animations/HoverMoveAnimation';
 
 export interface ExperienceCardProps {
   title: string;
@@ -20,9 +20,9 @@ const ExperienceCard: FunctionComponent<ExperienceCardProps> = ({
   gradient: dark,
 }) => {
   const containerDefautStyle =
-    "block rounded-xl p-4 md:px-6 md:py-8 max-w-[390px] md:h-[250px] ";
-  const iconDefaultStyle = "rounded-full w-fit p-3 shadow-2xl	mb-4 ";
-  const titleDefaultStyle = "text-2xl font-semibold ";
+    'block rounded-xl p-4 md:px-6 md:py-8 max-w-[390px] md:h-[250px] ';
+  const iconDefaultStyle = 'rounded-full w-fit p-3 shadow-2xl	mb-4 ';
+  const titleDefaultStyle = 'text-2xl font-semibold ';
   return (
     <ZoomInAnimation>
       <HoverMoveAnimation>

@@ -1,5 +1,5 @@
-import { FunctionComponent, useState } from "react";
-import ExperienceCard, { ExperienceCardProps } from "./ExperienceCard";
+import React, { FunctionComponent, useState } from 'react';
+import ExperienceCard, { ExperienceCardProps } from './ExperienceCard';
 
 interface ExperienceSectionProps {
   title: string;
@@ -12,9 +12,9 @@ const ExperienceSection: FunctionComponent<ExperienceSectionProps> = ({
 }) => {
   const [numberOfItemShow, setNumberOfItemShow] = useState<number>(2);
   const slicedArray = experiences.slice(0, numberOfItemShow);
-  const buttonDefaultStyle = "rounded-full text-mg font-medium p-4 py-2";
+  const buttonDefaultStyle = 'rounded-full text-mg font-medium p-4 py-2';
   const buttonDefaultBackground =
-    "linear-gradient(135deg, #FFCC33 0%, #E233FF 100%)";
+    'linear-gradient(135deg, #FFCC33 0%, #E233FF 100%)';
 
   return (
     <div className="max-w-[800px] m-auto w-[90%] mt-4">

@@ -1,5 +1,5 @@
-import { FunctionComponent, PropsWithChildren } from "react";
-import { motion } from "framer-motion";
+import React, { FunctionComponent, PropsWithChildren } from 'react';
+import { motion } from 'framer-motion';
 
 interface FromTheTopAnimationProps {
   duration?: number;
@@ -18,7 +18,7 @@ const FromTheTopAnimation: FunctionComponent<
       viewport={{ once: true }}
       className={className}
       transition={{
-        type: "spring",
+        type: 'spring',
         bounce: 0.3,
         duration: duration,
         delay: delay,

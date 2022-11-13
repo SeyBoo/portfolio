@@ -1,5 +1,5 @@
-import { FunctionComponent, PropsWithChildren } from "react";
-import { motion } from "framer-motion";
+import React, { FunctionComponent, PropsWithChildren } from 'react';
+import { motion } from 'framer-motion';
 
 const HoverMoveAnimation: FunctionComponent<PropsWithChildren> = ({
   children,

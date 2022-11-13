@@ -1,7 +1,7 @@
-import { FunctionComponent, useCallback } from "react";
-import FromTheLeftAnimation from "./animations/FromTheLeftAnimation";
-import FromTheRightAnimation from "./animations/FromTheRightAnimation";
-import FromTheTopAnimation from "./animations/FromTheTopAnimation";
+import React, { FunctionComponent, useCallback } from 'react';
+import FromTheLeftAnimation from './animations/FromTheLeftAnimation';
+import FromTheRightAnimation from './animations/FromTheRightAnimation';
+import FromTheTopAnimation from './animations/FromTheTopAnimation';
 
 interface BlockProps {
   title: string;
@@ -18,38 +18,39 @@ const InformationBlock: FunctionComponent<BlockProps> = ({
   reverse,
   gradient,
 }) => {
-  const titleDefaultStyle = "text-4xl font-semibold ";
+  const titleDefaultStyle = 'text-4xl font-semibold ';
   const containerDefaultStyle =
-    "flex flex-col md:flex-row justify-between gap-6 items-center rounded-lg p-6 md:p-12 w-[90%] m-auto max-w-[800px] ";
+    'flex flex-col md:flex-row justify-between gap-6 items-center rounded-lg p-6 md:p-12 w-[90%] m-auto max-w-[800px] ';
 
-  const renderTitle = useCallback(
-    () => {
-      return (
-        <h2
-          className={
-            reverse
-              ? titleDefaultStyle + "text-start"
-              : titleDefaultStyle + "text-end"
-          }
-        >
-          {title}
-        </h2>
-      );
-    },
-    [title, reverse],
-  );
+  const renderTitle = useCallback(() => {
+    return (
+      <h2
+        className={
+          reverse
+            ? titleDefaultStyle + 'text-start'
+            : titleDefaultStyle + 'text-end'
+        }
+      >
+        {title}
+      </h2>
+    );
+  }, [title, reverse]);
 
   return (
     <div
       style={{ background: gradient }}
-      className={reverse ? containerDefaultStyle + "md:flex-row-reverse" : containerDefaultStyle}
+      className={
+        reverse
+          ? containerDefaultStyle + 'md:flex-row-reverse'
+          : containerDefaultStyle
+      }
     >
       <div className="flex flex-col flex-wrap md:max-h-52 gap-3 m-auto w-full md:w-fit">
         {skills.map((skill, index) => (
           <FromTheTopAnimation key={index}>
             <p className="text-2xl font-light">
               {skill}
-              {arrow && " →"}
+              {arrow && ' →'}
             </p>
           </FromTheTopAnimation>
         ))}

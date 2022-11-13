@@ -1,10 +1,10 @@
-import Image, { StaticImageData } from "next/image";
-import { FunctionComponent, PropsWithChildren } from "react";
-import BlackBg from "../public/assets/dark-purple-bg.avif";
-import PinkBg from "../public/assets/light-pink-bg.avif";
-import FromTheLeftAnimation from "./animations/FromTheLeftAnimation";
-import FromTheRightAnimation from "./animations/FromTheRightAnimation";
-import FromTheTopAnimation from "./animations/FromTheTopAnimation";
+import Image, { StaticImageData } from 'next/image';
+import React, { FunctionComponent, PropsWithChildren } from 'react';
+import BlackBg from '../public/assets/dark-purple-bg.avif';
+import PinkBg from '../public/assets/light-pink-bg.avif';
+import FromTheLeftAnimation from './animations/FromTheLeftAnimation';
+import FromTheRightAnimation from './animations/FromTheRightAnimation';
+import FromTheTopAnimation from './animations/FromTheTopAnimation';
 
 interface AboutImageProps {
   image: StaticImageData;
@@ -16,13 +16,12 @@ const AboutImageBlock: FunctionComponent<AboutImageProps> = ({
   text,
   height,
 }) => {
-  
   return (
     <div className="relative" key={height}>
       <Image
         alt="pink-bg"
         src={image}
-        className={`rounded-lg md:w-96 w-[95%] m-auto h-20 ` + height}
+        className={'rounded-lg md:w-96 w-[95%] m-auto h-20 ' + height}
       />
       <p className="text-2xl md:text-3xl absolute top-[50%] left-[50%] transform translate-y-[-50%] translate-x-[-50%]">
         {text}
@@ -38,13 +37,14 @@ interface AboutTextContainerProps {
 const AboutTextContainer: FunctionComponent<
   PropsWithChildren<AboutTextContainerProps>
 > = ({ children, reverse }) => {
-  const defaultStyle = "flex flex-col gap-10 md:max-w-[29rem] pb-4 px-4 md:px-0 ";
+  const defaultStyle =
+    'flex flex-col gap-10 md:max-w-[29rem] pb-4 px-4 md:px-0 ';
   return (
     <div
       className={
         reverse
-          ? defaultStyle + "text-start md:text-end"
-          : defaultStyle + "text-end"
+          ? defaultStyle + 'text-start md:text-end'
+          : defaultStyle + 'text-end'
       }
     >
       {children}
@@ -60,13 +60,13 @@ const AboutBlock: FunctionComponent<PropsWithChildren<AboutBlockProps>> = ({
   children,
   reverse: direction,
 }) => {
-  const defaultStyle = "flex justify-between items-center flex-col ";
+  const defaultStyle = 'flex justify-between items-center flex-col ';
   return (
     <div
       className={
         direction
-          ? defaultStyle + "md:flex-row-reverse"
-          : defaultStyle + "md:flex-row"
+          ? defaultStyle + 'md:flex-row-reverse'
+          : defaultStyle + 'md:flex-row'
       }
     >
       {children}
@@ -81,7 +81,7 @@ interface HightLightedTextProps {
 const HightLightedText = ({ text }: HightLightedTextProps) => {
   return (
     <strong className="text-white font-semibold">
-      {text} {""}
+      {text} {''}
     </strong>
   );
 };
@@ -107,14 +107,18 @@ const AboutMe: FunctionComponent = () => {
             </AboutTextContainer>
           </FromTheLeftAnimation>
           <FromTheRightAnimation>
-            <AboutImageBlock image={PinkBg} text="🇫🇷🏡📚" height="md:h-[500px]" />
+            <AboutImageBlock
+              image={PinkBg}
+              text="🇫🇷🏡📚"
+              height="md:h-[500px]"
+            />
           </FromTheRightAnimation>
         </AboutBlock>
         <AboutBlock reverse>
           <FromTheRightAnimation>
             <AboutTextContainer reverse>
               <p className="text-[#8a8f98]">
-                My family {""}
+                My family {''}
                 <HightLightedText text="is full of Developers / Engineers." />
               </p>
               <p className="text-[#8a8f98]">
@@ -123,7 +127,11 @@ const AboutMe: FunctionComponent = () => {
             </AboutTextContainer>
           </FromTheRightAnimation>
           <FromTheLeftAnimation>
-            <AboutImageBlock image={BlackBg} text="🧠👨‍💻" height="md:h-[450px]" />
+            <AboutImageBlock
+              image={BlackBg}
+              text="🧠👨‍💻"
+              height="md:h-[450px]"
+            />
           </FromTheLeftAnimation>
         </AboutBlock>
         <AboutBlock>
@@ -134,7 +142,7 @@ const AboutMe: FunctionComponent = () => {
                 is one my favorite sport.
               </p>
               <p className="text-[#8a8f98]">
-                I also love <HightLightedText text="Rock Climbing" /> and{" "}
+                I also love <HightLightedText text="Rock Climbing" /> and{' '}
                 <HightLightedText text="Swimming." />
               </p>
             </AboutTextContainer>
