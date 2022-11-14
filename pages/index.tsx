@@ -1,14 +1,14 @@
 import React from 'react';
 import Head from 'next/head';
-import AboutMe from '../components/About';
-import InformationBlock from '../components/InformationBlock';
-import Footer from '../components/Footer';
-import Intro from '../components/Intro';
-import FromTheLeftAnimation from '../components/animations/FromTheLeftAnimation';
-import ExperienceSection from '../components/ExperienceSection';
-import LayersIcon from '../public/assets/layers.png';
-import WorldIcon from '../public/assets/world.png';
-import ExploreIcon from '../public/assets/explore.png';
+import AboutMe from '../module/home/components/About';
+import InformationBlock from '../module/home/components/InformationBlock';
+import Footer from '../module/home/components/Footer';
+import Intro from '../module/home/components/Intro';
+import FromTheLeftAnimation from '../common/components/animations/FromTheLeftAnimation';
+import ExperienceSection from '../module/home/components/ExperienceSection';
+import LayersIcon from '../common/assets/layers.png';
+import WorldIcon from '../common/assets/world.png';
+import ExploreIcon from '../common/assets/explore.png';
 
 export default function Home() {
   return (

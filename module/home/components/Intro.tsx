@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react';
 import Image from 'next/image';
-import Avatar from '../public/assets/avatar.jpg';
-import FromTheTopAnimation from './animations/FromTheTopAnimation';
-import ZoomInAnimation from './animations/ZoomInAnimation';
+import Avatar from '../../../common/assets/avatar.jpg';
+import FromTheTopAnimation from '../../../common/components/animations/FromTheTopAnimation';
+import ZoomInAnimation from '../../../common/components/animations/ZoomInAnimation';
 
 const Intro: FunctionComponent = () => {
   return (

@@ -1,10 +1,10 @@
 import Image, { StaticImageData } from 'next/image';
 import React, { FunctionComponent, PropsWithChildren } from 'react';
-import BlackBg from '../public/assets/dark-purple-bg.avif';
-import PinkBg from '../public/assets/light-pink-bg.avif';
-import FromTheLeftAnimation from './animations/FromTheLeftAnimation';
-import FromTheRightAnimation from './animations/FromTheRightAnimation';
-import FromTheTopAnimation from './animations/FromTheTopAnimation';
+import BlackBg from '../../../common/assets/dark-purple-bg.avif';
+import PinkBg from '../../../common/assets/light-pink-bg.avif';
+import FromTheLeftAnimation from '../../../common/components/animations/FromTheLeftAnimation';
+import FromTheRightAnimation from '../../../common/components/animations/FromTheRightAnimation';
+import FromTheTopAnimation from '../../../common/components/animations/FromTheTopAnimation';
 
 interface AboutImageProps {
   image: StaticImageData;
