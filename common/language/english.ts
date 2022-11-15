@@ -31,7 +31,7 @@ export const Data: Language = {
     data: [
       {
         illustration: {
-          height: 'md:h-[500px]',
+          height: 500,
           image: AboutLightIllustration,
           text: '🇫🇷🏡📚',
         },
@@ -74,7 +74,7 @@ export const Data: Language = {
         illustration: {
           image: AboutBlackIllustration,
           text: '🧠👨‍💻',
-          height: 'md:h-[450px]',
+          height: 450,
         },
         text: [
           [
@@ -98,7 +98,7 @@ export const Data: Language = {
       {
         illustration: {
           image: AboutLightIllustration,
-          height: 'md:h-[350px]',
+          height: 350,
           text: '🧗🏊‍♂️',
         },
         text: [

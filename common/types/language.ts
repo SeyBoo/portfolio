@@ -13,7 +13,7 @@ export interface IntroI {
 
 export interface IllustrationI {
   image: StaticImageData;
-  height: string;
+  height: number;
   text: string;
 }
 
