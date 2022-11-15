@@ -4,7 +4,7 @@ import AboutMe from 'module/home/components/About';
 import InformationBlock from 'module/home/components/InformationBlock';
 import Footer from 'module/home/components/Footer';
 import Intro from 'module/home/components/Intro';
-import { FromTheLeftAnimation } from 'common/components/animations';
+import { FromTheLeftAnimation } from 'common/animations';
 import ExperienceSection from 'module/home/components/ExperienceSection';
 import { useTranslation } from 'common/hooks/useTranslation';
 

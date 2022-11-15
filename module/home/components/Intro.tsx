@@ -4,7 +4,7 @@ import Avatar from '../../../common/assets/avatar.jpg';
 import {
   ZoomInAnimation,
   FromTheTopAnimation,
-} from '../../../common/components/animations';
+} from '../../../common/animations';
 import { IntroI, TextI } from '../../../common/types/language';
 
 const RenderHighlightedText = (data: string, index: number) => {

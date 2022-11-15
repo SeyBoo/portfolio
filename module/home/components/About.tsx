@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { FromTheTopAnimation } from 'common/components/animations';
+import { FromTheTopAnimation } from 'common/animations';
 import { About, AboutCard } from 'common/types/language';
 import {
   AboutBlock,

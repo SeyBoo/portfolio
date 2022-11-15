@@ -3,7 +3,7 @@ import {
   FromTheTopAnimation,
   FromTheRightAnimation,
   FromTheLeftAnimation,
-} from 'common/components/animations';
+} from 'common/animations';
 
 interface BlockProps {
   title: string;

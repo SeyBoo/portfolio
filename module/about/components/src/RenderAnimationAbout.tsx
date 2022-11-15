@@ -2,7 +2,7 @@ import React, { FunctionComponent, PropsWithChildren } from 'react';
 import {
   FromTheLeftAnimation,
   FromTheRightAnimation,
-} from '../../../../common/components/animations';
+} from '../../../../common/animations';
 import IsPair from '../../utils/isPair';
 
 interface AnimationProps {

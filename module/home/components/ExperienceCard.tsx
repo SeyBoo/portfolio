@@ -4,7 +4,7 @@ import React, { FunctionComponent } from 'react';
 import {
   ZoomInAnimation,
   HoverMoveAnimation,
-} from 'common/components/animations';
+} from 'common/animations';
 import { ExperienceCardI } from 'common/types/language';
 
 const ExperienceCard: FunctionComponent<ExperienceCardI> = ({
