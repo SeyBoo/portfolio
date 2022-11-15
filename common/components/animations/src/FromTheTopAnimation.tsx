@@ -8,7 +8,7 @@ interface FromTheTopAnimationProps {
   className?: string;
 }
 
-const FromTheTopAnimation: FunctionComponent<
+export const FromTheTopAnimation: FunctionComponent<
   PropsWithChildren<FromTheTopAnimationProps>
 > = ({ duration = 1.5, delay = 0.25, startY = -100, className, children }) => {
   return (
@@ -32,5 +32,3 @@ const FromTheTopAnimation: FunctionComponent<
     </motion.div>
   );
 };
-
-export default FromTheTopAnimation;

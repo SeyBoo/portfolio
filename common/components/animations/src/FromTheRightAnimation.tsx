@@ -1,32 +1,26 @@
 import React, { FunctionComponent, PropsWithChildren } from 'react';
 import { motion } from 'framer-motion';
 
-interface ZoomInAnimationProps {
-  className?: string;
-}
-const ZoomInAnimation: FunctionComponent<
-  PropsWithChildren<ZoomInAnimationProps>
-> = ({ children, className }) => {
+export const FromTheRightAnimation: FunctionComponent<PropsWithChildren> = ({
+  children,
+}) => {
   return (
     <motion.div
+      className="w-full"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className={className}
       transition={{
         type: 'spring',
-        bounce: 0.4,
         duration: 1.5,
         delay: 0.25,
       }}
       variants={{
-        visible: { scale: 1, opacity: 1 },
-        hidden: { scale: 0.5, opacity: 0 },
+        visible: { opacity: 1, x: 0 },
+        hidden: { opacity: 0, x: 100 },
       }}
     >
       {children}
     </motion.div>
   );
 };
-
-export default ZoomInAnimation;

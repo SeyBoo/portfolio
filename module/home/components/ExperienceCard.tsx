@@ -1,28 +1,24 @@
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { FunctionComponent } from 'react';
-import ZoomInAnimation from '../../../common/components/animations/ZoomInAnimation';
-import HoverMoveAnimation from '../../../common/components/animations/HoverMoveAnimation';
+import {
+  ZoomInAnimation,
+  HoverMoveAnimation,
+} from 'common/components/animations';
+import { ExperienceCardI } from 'common/types/language';
 
-export interface ExperienceCardProps {
-  title: string;
-  description: string;
-  icon: StaticImageData;
-  link: string;
-  gradient?: string;
-}
-
-const ExperienceCard: FunctionComponent<ExperienceCardProps> = ({
+const ExperienceCard: FunctionComponent<ExperienceCardI> = ({
   title,
   description,
   icon,
   link,
-  gradient: dark,
+  gradient,
 }) => {
   const containerDefautStyle =
     'block rounded-xl p-4 md:px-6 md:py-8 max-w-[390px] md:h-[250px] ';
   const iconDefaultStyle = 'rounded-full w-fit p-3 shadow-2xl	mb-4 ';
   const titleDefaultStyle = 'text-2xl font-semibold ';
+
   return (
     <ZoomInAnimation>
       <HoverMoveAnimation>
@@ -30,14 +26,15 @@ const ExperienceCard: FunctionComponent<ExperienceCardProps> = ({
           href={link}
           target="_blank"
           className={
-            dark
-              ? `${containerDefautStyle} ${dark} text-slate-50`
-              : `${containerDefautStyle} bg-white text-black`
+            gradient
+              ? `${containerDefautStyle}text-slate-50`
+              : `${containerDefautStyle}text-black`
           }
+          style={{ background: gradient ? gradient : 'white' }}
         >
           <div
             className={
-              dark
+              gradient
                 ? `${iconDefaultStyle} bg-white`
                 : `${iconDefaultStyle} bg-[#6968F7]`
             }
@@ -46,7 +43,9 @@ const ExperienceCard: FunctionComponent<ExperienceCardProps> = ({
           </div>
           <h3
             className={
-              dark ? titleDefaultStyle : `${titleDefaultStyle} text-[#6968F7]`
+              gradient
+                ? titleDefaultStyle
+                : `${titleDefaultStyle} text-[#6968F7]`
             }
           >
             {title}

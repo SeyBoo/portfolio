@@ -1,7 +1,7 @@
 import React, { FunctionComponent, PropsWithChildren } from 'react';
 import { motion } from 'framer-motion';
 
-const HoverMoveAnimation: FunctionComponent<PropsWithChildren> = ({
+export const HoverMoveAnimation: FunctionComponent<PropsWithChildren> = ({
   children,
 }) => {
   return (
@@ -15,4 +15,3 @@ const HoverMoveAnimation: FunctionComponent<PropsWithChildren> = ({
     </motion.div>
   );
 };
-export default HoverMoveAnimation;

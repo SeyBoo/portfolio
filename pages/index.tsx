@@ -1,16 +1,18 @@
 import React from 'react';
 import Head from 'next/head';
-import AboutMe from '../module/home/components/About';
-import InformationBlock from '../module/home/components/InformationBlock';
-import Footer from '../module/home/components/Footer';
-import Intro from '../module/home/components/Intro';
-import FromTheLeftAnimation from '../common/components/animations/FromTheLeftAnimation';
-import ExperienceSection from '../module/home/components/ExperienceSection';
-import LayersIcon from '../common/assets/layers.png';
-import WorldIcon from '../common/assets/world.png';
-import ExploreIcon from '../common/assets/explore.png';
+import AboutMe from 'module/home/components/About';
+import InformationBlock from 'module/home/components/InformationBlock';
+import Footer from 'module/home/components/Footer';
+import Intro from 'module/home/components/Intro';
+import { FromTheLeftAnimation } from 'common/components/animations';
+import ExperienceSection from 'module/home/components/ExperienceSection';
+import { useTranslation } from 'common/hooks/useTranslation';
 
 export default function Home() {
+  const translationData = useTranslation();
+
+  if (translationData === undefined) return null;
+
   return (
     <>
       <Head>
@@ -22,64 +24,24 @@ export default function Home() {
         />
       </Head>
       <div className="bg-[#131415] text-white min-h-screen overflow-hidden">
-        <Intro />
+        <Intro intro={translationData.intro} />
         <div className="max-w-[1600px] m-auto">
           <main>
-            <AboutMe />
+            <AboutMe about={translationData.about} />
             <ExperienceSection
-              title="Work Experiences"
-              experiences={[
-                {
-                  title: 'Klubx',
-                  description:
-                    'A Social Network that allows people to connect each other through their NFTs.',
-                  link: 'https://klubx.io/',
-                  icon: LayersIcon,
-                },
-                {
-                  title: 'Jobexit',
-                  description:
-                    'Legal Tech that calculates all the indemnities, risks and allowances related to a breach of contract.',
-                  link: 'https://www.jobexit.fr/',
-                  icon: WorldIcon,
-                  gradient: 'bg-gradient-to-bl from-indigo-300 to-purple-400',
-                },
-                {
-                  title: 'My Little Adventure',
-                  description:
-                    'A travel technology startup that helps theirs clients upsell Tours and Activities to their customers.',
-                  link: 'https://www.mylittleadventure.com/',
-                  icon: ExploreIcon,
-                  gradient:
-                    'bg-gradient-to-bl from-pink-300 via-purple-300 to-indigo-400',
-                },
-              ]}
+              title={translationData.workExperiences.title}
+              experiences={translationData.workExperiences.experiences}
             />
             <div className="flex flex-col gap-12 mt-8">
               <InformationBlock
-                title="3+ years of experience"
-                skills={[
-                  'Fullstack Development',
-                  'Mobile Development',
-                  'DevOps',
-                  'UI/UX Design',
-                ]}
+                title={translationData.skills.title}
+                skills={translationData.skills.skills}
                 arrow
                 gradient="linear-gradient(135deg, #CB5EEE 0%, #4BE1EC 100%)"
               />
               <InformationBlock
-                title="Technical Skills"
-                skills={[
-                  'React.js',
-                  'Next.js',
-                  'Typescript',
-                  'Vue.js',
-                  'React Native',
-                  'Node.js',
-                  'Nest.js',
-                  'Python',
-                  'Flask',
-                ]}
+                title={translationData.technicalSkills.title}
+                skills={translationData.technicalSkills.skills}
                 gradient="linear-gradient(135deg, #FFCC33 0%, #E233FF 100%)"
                 reverse
               />
@@ -91,11 +53,13 @@ export default function Home() {
                 }}
               >
                 <FromTheLeftAnimation>
-                  <h4 className="text-3xl font-semibold">Let&apos;s chat!</h4>
+                  <h4 className="text-3xl font-semibold">
+                    {translationData.contact.title}
+                  </h4>
                 </FromTheLeftAnimation>
                 <FromTheLeftAnimation>
                   <p className="font-light">
-                    I&apos;d love to talk to you! Send me an email !
+                    {translationData.contact.description}
                   </p>
                 </FromTheLeftAnimation>
                 <FromTheLeftAnimation>
@@ -104,7 +68,7 @@ export default function Home() {
                       href="mailto:antoinechevalier.work@protonmail.com"
                       className="bg-[#131415] text-[#8A24FF] text-md py-3 px-4 rounded-full font-bold"
                     >
-                      Chat with me →
+                      {translationData.contact.callToAction} →
                     </a>
                   </div>
                 </FromTheLeftAnimation>

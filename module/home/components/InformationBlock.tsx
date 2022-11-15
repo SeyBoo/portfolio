@@ -1,7 +1,9 @@
 import React, { FunctionComponent, useCallback } from 'react';
-import FromTheLeftAnimation from '../../../common/components/animations/FromTheLeftAnimation';
-import FromTheRightAnimation from '../../../common/components/animations/FromTheRightAnimation';
-import FromTheTopAnimation from '../../../common/components/animations/FromTheTopAnimation';
+import {
+  FromTheTopAnimation,
+  FromTheRightAnimation,
+  FromTheLeftAnimation,
+} from 'common/components/animations';
 
 interface BlockProps {
   title: string;

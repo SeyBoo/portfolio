@@ -1,9 +1,10 @@
 import React, { FunctionComponent, useState } from 'react';
-import ExperienceCard, { ExperienceCardProps } from './ExperienceCard';
+import { ExperienceCardI } from 'common/types/language';
+import ExperienceCard from './ExperienceCard';
 
 interface ExperienceSectionProps {
   title: string;
-  experiences: ExperienceCardProps[];
+  experiences: ExperienceCardI[];
 }
 
 const ExperienceSection: FunctionComponent<ExperienceSectionProps> = ({

@@ -80,33 +80,17 @@ export const Data: Language = {
           [
             {
               highlighted: false,
-              data: 'I was born and raised in',
+              data: 'My family',
             },
             {
               highlighted: true,
-              data: 'Nice, FR',
+              data: 'is full of Developers / Engineers.',
             },
           ],
           [
             {
-              highlighted: false,
-              data: 'I have been',
-            },
-            {
               highlighted: true,
-              data: 'Home Schooled',
-            },
-            {
-              highlighted: false,
-              data: 'as a teen and i',
-            },
-            {
-              highlighted: true,
-              data: 'started Programming',
-            },
-            {
-              highlighted: false,
-              data: 'during this period.',
+              data: 'I completed my first Freelance jobs at 16.',
             },
           ],
         ],
@@ -120,34 +104,30 @@ export const Data: Language = {
         text: [
           [
             {
-              highlighted: false,
-              data: 'I was born and raised in',
+              highlighted: true,
+              data: 'Calisthenics',
             },
             {
-              highlighted: true,
-              data: 'Nice, FR',
+              highlighted: false,
+              data: 'is one my favorite sport.',
             },
           ],
           [
             {
               highlighted: false,
-              data: 'I have been',
+              data: 'I also love',
             },
             {
               highlighted: true,
-              data: 'Home Schooled',
+              data: 'Rock Climbing',
             },
             {
               highlighted: false,
-              data: 'as a teen and i',
+              data: 'and',
             },
             {
               highlighted: true,
-              data: 'started Programming',
-            },
-            {
-              highlighted: false,
-              data: 'during this period.',
+              data: 'Swimming.',
             },
           ],
         ],
