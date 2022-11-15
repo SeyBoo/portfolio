@@ -187,7 +187,7 @@ export const Data: Language = {
   },
   contact: {
     title: 'Let\'s chat!',
-    description: 'I\'d love to talk to you! Send me an email !',
+    description: 'I\'d love to talk to you! Send me an email!',
     callToAction: 'Chat with me',
   },
 };

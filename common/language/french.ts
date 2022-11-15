@@ -7,16 +7,20 @@ import MLAIcon from '../assets/explore.png';
 
 export const Data: Language = {
   intro: {
-    title: 'Hi, I\'m Antoine',
+    title: 'Bonjour, je suis Antoine',
     subTitle: [
       [
         {
+          highlighted: false,
+          data: 'Un',
+        },
+        {
           highlighted: true,
-          data: 'Développeur Full Stack et passionné d\'IA',
+          data: 'Développeur Full Stack Freelance et passionné d\'IA',
         },
         {
           highlighted: false,
-          data: 'basé en France, actuellement freelance.',
+          data: 'basé en France.',
         },
       ],
     ],
@@ -35,7 +39,7 @@ export const Data: Language = {
           [
             {
               highlighted: false,
-              data: 'I was born and raised in',
+              data: 'Je suis né et j\'ai grandi à',
             },
             {
               highlighted: true,
@@ -45,28 +49,28 @@ export const Data: Language = {
           [
             {
               highlighted: false,
-              data: 'I have been',
-            },
+              data: 'J\'ai été ',
+            }, 
             {
               highlighted: true,
               data: 'Home Schooled',
             },
             {
               highlighted: false,
-              data: 'as a teen and i',
+              data: 'durant mon adolescence et j\'ai',
             },
             {
               highlighted: true,
-              data: 'started Programming',
+              data: 'commencé la Programmation',
             },
             {
               highlighted: false,
-              data: 'during this period.',
+              data: 'à cette période.',
             },
           ],
         ],
       },
-      {
+      {//
         illustration: {
           image: AboutBlackIllustration,
           text: '🧠👨‍💻',
@@ -76,33 +80,17 @@ export const Data: Language = {
           [
             {
               highlighted: false,
-              data: 'I was born and raised in',
+              data: 'Ma famille est ',
             },
             {
               highlighted: true,
-              data: 'Nice, FR',
+              data: 'pleine de développeurs / ingénieurs.',
             },
           ],
           [
             {
-              highlighted: false,
-              data: 'I have been',
-            },
-            {
               highlighted: true,
-              data: 'Home Schooled',
-            },
-            {
-              highlighted: false,
-              data: 'as a teen and i',
-            },
-            {
-              highlighted: true,
-              data: 'started Programming',
-            },
-            {
-              highlighted: false,
-              data: 'during this period.',
+              data: 'J\'ai terminé mes premières missions de freelance à 16 ans.',
             },
           ],
         ],
@@ -117,33 +105,33 @@ export const Data: Language = {
           [
             {
               highlighted: false,
-              data: 'I was born and raised in',
+              data: 'La',
             },
             {
               highlighted: true,
-              data: 'Nice, FR',
+              data: 'Callisthénie',
+            },
+            {
+              highlighted: false,
+              data: 'est mon sport préféré.',
             },
           ],
           [
             {
               highlighted: false,
-              data: 'I have been',
+              data: 'J\'aime aussi',
             },
             {
               highlighted: true,
-              data: 'Home Schooled',
+              data: 'l\'Escalade',
             },
             {
               highlighted: false,
-              data: 'as a teen and i',
+              data: 'et',
             },
             {
               highlighted: true,
-              data: 'started Programming',
-            },
-            {
-              highlighted: false,
-              data: 'during this period.',
+              data: 'la Natation.',
             },
           ],
         ],
@@ -151,19 +139,19 @@ export const Data: Language = {
     ],
   },
   workExperiences: {
-    title: 'Work Experiences',
+    title: 'Expériences Professionnelles',
     experiences: [
       {
         title: 'Klubx',
         description:
-          'A Social Network that allows people to connect each other through their NFTs.',
+          'Un réseau social qui permet aux gens de se connecter entre eux grâce à leurs NFT.',
         icon: KlubxIcon,
         link: 'https://klubx.io/',
       },
       {
         title: 'Jobexit',
         description:
-          'A Legal Tech that help you calculates all the indemnities, risks and allowances related to a breach of contract.',
+          'Une Legal Tech qui vous aide à calculer toutes les indemnités et risques liés à une rupture de contrat.',
         icon: JobexitIcon,
         link: 'https://www.jobexit.fr/',
         gradient: 'linear-gradient(to bottom left, #a5b4fc, #c084fc)',
@@ -171,7 +159,7 @@ export const Data: Language = {
       {
         title: 'My Little Adventure',
         description:
-          'A travel technology startup that helps theirs clients upsell Tours and Activities to their customers.',
+          'Une start-up technologique qui aide ses clients à vendre leurs Tours et Activités à leurs clients.',
         icon: MLAIcon,
         link: 'https://www.mylittleadventure.com/',
         gradient: 'linear-gradient(to bottom left, #818cf8, #d8b4fe, #f9a8d4)',
@@ -179,7 +167,7 @@ export const Data: Language = {
     ],
   },
   skills: {
-    title: '3+ years of experience',
+    title: '3+ ans d\'expérience',
     skills: [
       'Fullstack Development',
       'Mobile Development',
@@ -188,7 +176,7 @@ export const Data: Language = {
     ],
   },
   technicalSkills: {
-    title: 'Technical Skills',
+    title: 'Compétences Techniques',
     skills: [
       'React.js',
       'Next.js',
@@ -202,8 +190,8 @@ export const Data: Language = {
     ],
   },
   contact: {
-    title: 'Let\'s chat!',
-    description: 'I\'d love to talk to you! Send me an email !',
-    callToAction: 'Chat with me',
+    title: 'Contactez moi!',
+    description: 'J\'aimerais vous parler! Envoyez-moi un mail!',
+    callToAction: 'Envoyez moi un mail',
   },
 };
