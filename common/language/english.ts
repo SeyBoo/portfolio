@@ -20,14 +20,14 @@ export const Data: Language = {
         },
         {
           highlighted: false,
-          data: 'based in France, currently Freelancing and building project.',
+          data: 'based in France, currently up for Freelancing and building projects.',
         },
       ],
     ],
     callToAction: 'Chat with me',
   },
   about: {
-    title: 'Know about me',
+    title: 'Find out about me',
     data: [
       {
         illustration: {
@@ -57,7 +57,7 @@ export const Data: Language = {
             },
             {
               highlighted: false,
-              data: 'as a teen and i',
+              data: 'as a teen and',
             },
             {
               highlighted: true,
@@ -90,7 +90,7 @@ export const Data: Language = {
           [
             {
               highlighted: true,
-              data: 'I completed my first Freelance jobs at 16.',
+              data: 'I completed my first Freelance job at 16.',
             },
           ],
         ],
@@ -147,7 +147,7 @@ export const Data: Language = {
       {
         title: 'Jobexit',
         description:
-          'A Legal Tech that help you calculates all the indemnities, risks and allowances related to a breach of contract.',
+          'A Legal Tech that helps you calculates all the indemnities, risks and allowances related to a breach of contract.',
         icon: JobexitIcon,
         link: 'https://www.jobexit.fr/',
         gradient: 'linear-gradient(to bottom left, #a5b4fc, #c084fc)',
